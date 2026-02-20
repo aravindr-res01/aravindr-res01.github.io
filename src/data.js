@@ -12,7 +12,7 @@ export const DATA = {
     title:   "Lead Full-Stack Engineer · FinTech",
     tagline: "FinTech · Distributed Systems · Peer Reviewer · Mentor",
     // Place your photo in /public/resources/ and reference it here
-    photo:   "resources/3111336A-0B10-46E1-A4B9-425E01F86EB4.jpeg",
+    photo:   "/resources/3111336A-0B10-46E1-A4B9-425E01F86EB4.jpeg",
     email:   "aravindr.res@gmail.com",
     about: [
       "I am a software engineer with over 10 years of experience building secure, scalable financial technology systems — particularly in payments, risk, and compliance. My work spans backend architecture, microservices, cloud-native infrastructure, and distributed systems design.",
