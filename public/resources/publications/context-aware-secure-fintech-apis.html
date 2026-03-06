@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Context Aware Framework for Secure Fintech APIs: Leveraging Java Spring Boot and OAuth 2.0 with Dynamic Token Adaptation | Aravind Raghu</title>
+  <meta name="description" content="Fintech applications are generally designed to maintain ultra low latency sub 25 ms p99 and high performance and enterprise grade security requirements to ..." />
+  <link rel="canonical" href="https://aravindraghu.com/publications/context-aware-secure-fintech-apis.html" />
+  <meta name="citation_title" content="A Context Aware Framework for Secure Fintech APIs: Leveraging Java Spring Boot and OAuth 2.0 with Dynamic Token Adaptation" />
+  <meta name="citation_author" content="Aravind Raghu" />
+  <meta name="citation_publication_date" content="2025-05-22" />
+  <meta name="citation_online_date" content="2025-05-22" />
+  <meta name="citation_doi" content="10.52783/jisem.v10i49s.9890" />
+  <meta name="citation_abstract_html_url" content="https://aravindraghu.com/publications/context-aware-secure-fintech-apis.html" />
+  <meta name="citation_fulltext_html_url" content="https://aravindraghu.com/publications/context-aware-secure-fintech-apis.html" />
+  <meta name="citation_pdf_url" content="https://aravindraghu.com/papers/context-aware-secure-fintech-apis.pdf" />
+  <meta name="citation_journal_title" content="Journal of Information Systems Engineering and Management" />
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #0f172a; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px 72px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 18px; padding: 28px; box-shadow: 0 10px 30px rgba(15,23,42,0.05); }
+    .eyebrow { display: inline-block; padding: 6px 12px; border-radius: 999px; background: #eff6ff; color: #1d4ed8; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 16px; }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 12px; }
+    .meta { color: #475569; line-height: 1.7; margin: 0 0 18px; }
+    .abstract p { color: #334155; line-height: 1.8; margin: 0 0 14px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+    .btn { display: inline-block; padding: 10px 16px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; border: 1px solid #dbeafe; background: #eff6ff; color: #1d4ed8; }
+    .btn.primary { background: #0f172a; color: #fff; border-color: #0f172a; }
+    .back { display: inline-block; margin-bottom: 18px; color: #2563eb; text-decoration: none; font-weight: 600; }
+    .note { margin-top: 18px; padding: 14px 16px; border-radius: 14px; background: #f8fafc; border: 1px solid #e2e8f0; color: #475569; font-size: 14px; line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="/">← Back to portfolio</a>
+    <article class="card">
+      <div class="eyebrow">Publication</div>
+      <h1>A Context Aware Framework for Secure Fintech APIs: Leveraging Java Spring Boot and OAuth 2.0 with Dynamic Token Adaptation</h1>
+      <p class="meta"><strong>Authors:</strong> Aravind Raghu<br /><strong>Venue:</strong> Journal of Information Systems Engineering and Management · Vol. 10 No. 49s (2025)<br /><strong>Year:</strong> 2025<br /><strong>DOI:</strong> <a href="https://doi.org/10.52783/jisem.v10i49s.9890">10.52783/jisem.v10i49s.9890</a></p>
+      <section class="abstract">
+        <h2>Abstract</h2>
+        <p>Fintech applications are generally designed to maintain ultra low latency sub 25 ms p99 and high performance and enterprise grade security requirements to secure millions of high value transactions. This paper presents Dynamic Contextual OAuth Token Adaptation (DCOTA), an innovative Java SpringBoot framework built to enhance standard Oauth 2 flows in real-time with context-aware token policies.</p>
+        <p>We calculate a per request risk score considering device fingerprinting, geolocation, transaction amount and network jitter and dynamically augmenting JSON Web Token (JWT) scope, time to live (TTL), and rate limits on the fly. We designed a three-tier architecture consists of a mutual TLS terminating API Gateway, a DCOTA filtering layer that validates with JWK backed JWTs, and Spring Boot resource servers that use clustered Redis as storage for atomic revocation.</p>
+        <p>A comprehensive test suite includes functional testing using JUnit 5 & Mockito, load testing using Apache JMeter, and penetration testing using OWASP ZAP & Burp Suite. Under WAN emulation we achieved 50 ms RTT at 0.1% packet loss. DCOTA incurs only a 2 ms median latency overhead and 84% fewer unauthorized attempts while keeping at least 230 TPS.</p>
+      </section>
+      <div class="actions">
+        <a class="btn primary" href="/papers/context-aware-secure-fintech-apis.pdf">Download PDF</a>
+        <a class="btn" href="https://doi.org/10.52783/jisem.v10i49s.9890">View DOI</a>
+        <a class="btn" href="https://www.jisem-journal.com/index.php/journal/article/view/9890">Publisher Page</a>
+      </div>
+      <div class="note">Upload the matching PDF file to <code>/public/papers</code> in the repo so the <strong>Download PDF</strong> button resolves on the live site.</div>
+    </article>
+  </main>
+</body>
+</html>
