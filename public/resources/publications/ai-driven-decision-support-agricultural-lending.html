@@ -1,56 +1,86 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Implementing AI-Driven Decision Support in Agricultural Lending Through Predictive Analytics for Customer Relationship Management | Aravind Raghu</title>
-  <meta name="description" content="This work provides a complete methodology for adopting well-established AI methods (predictive analytics, LLM agents, forecasting) into Microsoft Dynamics ..." />
-  <link rel="canonical" href="https://aravindraghu.com/publications/ai-driven-decision-support-agricultural-lending.html" />
+  <meta charset="UTF-8" />
+  <title>Implementing AI-Driven Decision Support in Agricultural Lending Through Predictive Analytics for Customer Relationship Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Scholar / citation metadata -->
   <meta name="citation_title" content="Implementing AI-Driven Decision Support in Agricultural Lending Through Predictive Analytics for Customer Relationship Management" />
   <meta name="citation_author" content="Karthik Nallani Chakravartula" />
   <meta name="citation_author" content="Aravind Raghu" />
-  <meta name="citation_publication_date" content="2026-01-13" />
-  <meta name="citation_online_date" content="2026-01-13" />
-  <meta name="citation_doi" content="10.56578/jimd050102" />
-  <meta name="citation_abstract_html_url" content="https://aravindraghu.com/publications/ai-driven-decision-support-agricultural-lending.html" />
-  <meta name="citation_fulltext_html_url" content="https://aravindraghu.com/publications/ai-driven-decision-support-agricultural-lending.html" />
-  <meta name="citation_pdf_url" content="https://aravindraghu.com/papers/ai-driven-decision-support-agricultural-lending.pdf" />
+  <meta name="citation_publication_date" content="2026" />
   <meta name="citation_journal_title" content="Journal of Intelligent Management Decision" />
+  <meta name="citation_doi" content="10.56578/jimd050102" />
+  <meta name="citation_pdf_url" content="https://aravindraghu.com/papers/ai-driven-decision-support-agricultural-lending.pdf" />
+
   <style>
-    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #0f172a; }
-    .wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px 72px; }
-    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 18px; padding: 28px; box-shadow: 0 10px 30px rgba(15,23,42,0.05); }
-    .eyebrow { display: inline-block; padding: 6px 12px; border-radius: 999px; background: #eff6ff; color: #1d4ed8; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 16px; }
-    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 12px; }
-    .meta { color: #475569; line-height: 1.7; margin: 0 0 18px; }
-    .abstract p { color: #334155; line-height: 1.8; margin: 0 0 14px; }
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
-    .btn { display: inline-block; padding: 10px 16px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; border: 1px solid #dbeafe; background: #eff6ff; color: #1d4ed8; }
-    .btn.primary { background: #0f172a; color: #fff; border-color: #0f172a; }
-    .back { display: inline-block; margin-bottom: 18px; color: #2563eb; text-decoration: none; font-weight: 600; }
-    .note { margin-top: 18px; padding: 14px 16px; border-radius: 14px; background: #f8fafc; border: 1px solid #e2e8f0; color: #475569; font-size: 14px; line-height: 1.7; }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      color: #111827;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 860px;
+      margin: 48px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    h1 { font-size: 2rem; margin-bottom: 0.75rem; }
+    h2 { margin-top: 2rem; }
+    .meta { margin: 0.4rem 0; }
+    .links a {
+      display: inline-block;
+      margin-right: 16px;
+      margin-top: 12px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <a class="back" href="/">← Back to portfolio</a>
-    <article class="card">
-      <div class="eyebrow">Publication</div>
-      <h1>Implementing AI-Driven Decision Support in Agricultural Lending Through Predictive Analytics for Customer Relationship Management</h1>
-      <p class="meta"><strong>Authors:</strong> Karthik Nallani Chakravartula, Aravind Raghu<br /><strong>Venue:</strong> Journal of Intelligent Management Decision · 5(1), 11–34<br /><strong>Year:</strong> 2026<br /><strong>DOI:</strong> <a href="https://doi.org/10.56578/jimd050102">10.56578/jimd050102</a></p>
-      <section class="abstract">
-        <h2>Abstract</h2>
-        <p>This work provides a complete methodology for adopting well-established AI methods (predictive analytics, LLM agents, forecasting) into Microsoft Dynamics 365 Customer Relationship Management (CRM) for agricultural lending. While not claiming that the algorithms are novel, this work contributes a pragmatic approach to implementing these algorithms that specifically address the regulatory, seasonal, and operational characteristics of agricultural finance, as regulated by the Farm Credit System.</p>
-        <p>It focuses on real-life constraints within the regulated financial services industry and measurable impacts that occurred. The paper provides a domain-oriented application of AI-CRM integration, with statistical testing including external validation on USDA datasets and benchmarking across peer Farm Credit institutions, as well as cross-institutional analysis.</p>
-        <p>Over an 18-month observation period, Farm Credit institutions reported statistically significant improvements, including average case resolution time falling by 28% (67.2h to 48.4h) and lead conversions improving by 35% (25.9% to 35.0%).</p>
-      </section>
-      <div class="actions">
-        <a class="btn primary" href="/papers/ai-driven-decision-support-agricultural-lending.pdf">Download PDF</a>
-        <a class="btn" href="https://doi.org/10.56578/jimd050102">View DOI</a>
-        <a class="btn" href="https://www.acadlore.com/article/JIMD/2026_5_1/jimd050102">Publisher Page</a>
-      </div>
-      <div class="note">Upload the matching PDF file to <code>/public/papers</code> in the repo so the <strong>Download PDF</strong> button resolves on the live site.</div>
-    </article>
+  <main class="container">
+    <a class="back-link" href="/#publications">← Back to Publications</a>
+
+    <h1>Implementing AI-Driven Decision Support in Agricultural Lending Through Predictive Analytics for Customer Relationship Management</h1>
+
+    <p class="meta"><strong>Authors:</strong> Karthik Nallani Chakravartula, Aravind Raghu</p>
+    <p class="meta"><strong>Type:</strong> Journal Article</p>
+    <p class="meta"><strong>Venue:</strong> Journal of Intelligent Management Decision</p>
+    <p class="meta"><strong>Year:</strong> 2026</p>
+    <p class="meta"><strong>DOI:</strong> <a href="https://doi.org/10.56578/jimd050102" target="_blank" rel="noreferrer">10.56578/jimd050102</a></p>
+
+    <h2>Abstract</h2>
+    <p>
+      This study explores the implementation of AI-driven decision support in agricultural lending through
+      predictive analytics integrated with customer relationship management systems. The framework is designed
+      to help lenders evaluate borrower risk, historical repayment patterns, and relevant agricultural factors
+      more effectively.
+    </p>
+    <p>
+      By incorporating predictive intelligence into lending workflows, the approach aims to improve the quality
+      of credit decisions, increase operational efficiency, and support more data-driven customer relationship
+      management in agricultural finance environments.
+    </p>
+    <p>
+      The work highlights the potential of AI-enabled CRM systems to strengthen lending accuracy and improve
+      decision support capabilities for institutions serving agriculture-focused borrowers.
+    </p>
+
+    <div class="links">
+      <a href="/papers/ai-driven-decision-support-agricultural-lending.pdf" target="_blank" rel="noreferrer">Download PDF</a>
+      <a href="https://doi.org/10.56578/jimd050102" target="_blank" rel="noreferrer">View DOI</a>
+    </div>
   </main>
 </body>
 </html>
