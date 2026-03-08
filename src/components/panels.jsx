@@ -151,69 +151,52 @@ export function MentorshipPanel() {
 /* ── Publications ───────────────────────────────────────── */
 export function PublicationsPanel() {
   const d = DATA.publications;
-  const published = d.items.filter((item) => item.status !== "in-publishing");
-  const pending = d.items.filter((item) => item.status === "in-publishing");
-
-  const PublicationCard = ({ item }) => (
-    <Card key={item.slug}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 10, flexWrap: "wrap" }}>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-          <span style={{ padding: "2px 9px", borderRadius: 999, fontSize: "0.74rem", fontWeight: 700, background: "#f1f5f9", color: "#475569", border: "1px solid #e2e8f0" }}>
-            {item.year}
-          </span>
-          <span style={{ padding: "2px 9px", borderRadius: 999, fontSize: "0.74rem", fontWeight: 700, background: "#eff6ff", color: "#1d4ed8", border: "1px solid #bfdbfe" }}>
-            {item.type}
-          </span>
-          {item.badge && <StatusBadge status={item.status === "in-publishing" ? "upcoming" : "completed"} label={item.badge} />}
-        </div>
-      </div>
-
-      <h3 style={{ margin: "0 0 6px", fontSize: "1rem", color: "#0f172a" }}>{item.title}</h3>
-      {item.authors && <p style={{ margin: "0 0 6px", color: "#475569", fontSize: "0.84rem", lineHeight: 1.6 }}>{item.authors}</p>}
-      <p style={{ margin: "0 0 10px", color: "#64748b", fontSize: "0.86rem" }}>{item.venue}</p>
-      {item.summary && <p style={{ margin: "0 0 14px", color: "#475569", fontSize: "0.86rem", lineHeight: 1.7 }}>{item.summary}</p>}
-
-      <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-        {item.abstractPage && <ELink href={item.abstractPage}>Abstract →</ELink>}
-        {item.doi && <ELink href={item.doi}>DOI →</ELink>}
-        {item.publisherUrl && <ELink href={item.publisherUrl}>Publisher Page →</ELink>}
-        {item.pdfPath && <ELink href={item.pdfPath}>PDF →</ELink>}
-      </div>
-    </Card>
-  );
 
   return (
-    <div>
-      <SectionHead title="Publications & Research" sub={d.subtitle} />
-
-      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 18 }}>
-        {d.profiles.map((p, i) => (
-          <ELink key={i} href={p.url} pill>{p.label}</ELink>
-        ))}
-      </div>
-
-      {published.length > 0 && (
-        <div style={{ marginBottom: pending.length ? 28 : 0 }}>
-          <p style={{ margin: "0 0 12px", fontSize: "0.75rem", color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 700 }}>
-            Published Work
-          </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-            {published.map((item) => <PublicationCard key={item.slug} item={item} />)}
+    <>
+      {d.items.length === 0 ? (
+        <Card>
+          <p>Publications will be listed here. View current work on academic profiles:</p>
+          <div className="flex flex-wrap gap-3 mt-3">
+            {d.profiles.map((p, i) => (
+              <ELink key={i} href={p.url}>{p.label}</ELink>
+            ))}
           </div>
+        </Card>
+      ) : (
+        <div className="grid gap-4">
+          {d.items.map((item, i) => (
+            <Card key={i}>
+              <div className="flex flex-wrap items-center gap-2 mb-2">
+                <StatusBadge>{item.badge || item.year}</StatusBadge>
+                <span className="text-sm opacity-70">{item.year}</span>
+                <span className="text-sm opacity-70">{item.type}</span>
+              </div>
+
+              <h3 className="text-xl font-semibold">{item.title}</h3>
+              {item.authors && <p className="mt-1">{item.authors}</p>}
+              <p className="mt-1">{item.venue}</p>
+              {item.summary && <p className="mt-3">{item.summary}</p>}
+
+              <div className="flex flex-wrap gap-3 mt-4">
+                {item.abstractPage && (
+                  <ELink href={item.abstractPage}>Abstract →</ELink>
+                )}
+                {item.pdfPath && (
+                  <ELink href={item.pdfPath}>PDF →</ELink>
+                )}
+                {item.publisherUrl && (
+                  <ELink href={item.publisherUrl}>Publisher Page →</ELink>
+                )}
+                {item.doi && (
+                  <ELink href={item.doi}>DOI →</ELink>
+                )}
+              </div>
+            </Card>
+          ))}
         </div>
       )}
-
-      {pending.length > 0 && (
-        <div>
-          <p style={{ margin: "0 0 12px", fontSize: "0.75rem", color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 700 }}>
-             Accepted / In Publishing
-          </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-            {pending.map((item) => <PublicationCard key={item.slug} item={item} />)}
-          </div>
-        </div>
-      )}
-    </div>
+    </>
   );
 }
 
